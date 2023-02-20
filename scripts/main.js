@@ -1,11 +1,12 @@
 class Main {
 
-    #observers = [];
+    #observers
 
     constructor() {
         this.header = document.querySelector('.header');
         this.hero = new HeroSlider('.swiper');
         this.sides = document.querySelectorAll('.side');
+        this.#observers = [];
         this.#init();
     }
 

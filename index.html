@@ -27,8 +27,25 @@
 <body>
    <div id="global-container">
       <div id="conteiner">
+         <div class="nav-trigger"></div>
          <div class="header">
-
+            <nav>
+               <div class="header__logo">
+                  店舗のロゴ！
+               </div>
+               <ul class="header__list">
+                  <li class="header__item"><a href="#">TOP</a></li>
+                  <li class="header__item"><a href="#">こだわり</a></li>
+                  <li class="header__item"><a href="#">楽しみ方</a></li>
+                  <li class="header__item"><a href="#1">サイトマップ</a></li>
+                  <li class="header__item"><a href="#">お問い合わせ</a></li>
+               </ul>
+            </nav>
+            <button class="mobile-menu__btn">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
          </div>
          <div id="content">
             <div class="hero">
@@ -39,11 +56,11 @@
                         <img src="/scripts/images/image-1.jpg" />
                      </div>
                      <div class="swiper-slide">
-                        <div class="hero__title">Fantastic</div>
+                        <div class="hero__title">商品名</div>
                         <img src="/scripts/images/image-1.jpg" />
                      </div>
                      <div class="swiper-slide">
-                        <div class="hero__title">Experience</div>
+                        <div class="hero__title">一押し！</div>
                         <img src="/scripts/images/image-1.jpg" />
                      </div>
                   </div>
@@ -52,180 +69,213 @@
          </div>
          <div id="main-content">
             <main>
-               <section class="introduction">
-                  <div class="introduction__inner">
-                     <div class="introduction__min-img"></div>
-                     <div class="introduction__menu">
-                        <h1 class="font-xl">
-                           テキスト
-                           <span>x</span>
-                           テキスト
-                           <span>x</span>
-                           テキスト
-                        </h1>
-                        <div class="introduction__text font-md">
-                           <p>
-                              テキストテキストテキストテキストテキストテキストテキスト
-                              テキストテキストテキストテキストテキストテキストテキスト
-                              テキストテキストテキストテキストテキストテキストテキスト
-                              テキストテキストテキストテキストテキストテキストテキスト
-                              テキストテキストテキストテキストテキストテキストテキスト
-                              テキストテキストテキストテキストテキストテキストテキスト
-                           </p>
+               <div class="div-bg">
+                  <section class="introduction">
+                     <div class="introduction__inner">
+                        <div class="introduction__min-img">
+                           <img src="/scripts/images/image-1.jpg">
+                           <img src="/scripts/images/image-1.jpg">
+                        </div>
+                        <div class="introduction__menu">
+                           <h1 class="font-xl">
+                              <p>テキスト</p>
+                              <span>x</span>
+                              <p>テキスト</p>
+                              <span>x</span>
+                              <p>テキスト</p>
+                           </h1>
+                           <div class="introduction__text font-md">
+                              <p>
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                              </p>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="introduction__card">
-                     <h1 class="font-xl">
-                        テキストテキスト<span>テキストてき</span>テキスト
-                     </h1>
-                     <div class="introduction__text font-md">
-                        <p>
-                           テキストテキストテキストテキストテキストテキストテキスト
-                           テキストテキストテキストテキストテキストテキストテキスト
-                           テキストテキストテキストテキストテキストテキストテキスト
-                           テキストテキストテキストテキストテキストテキストテキスト
-                           テキストテキストテキストテキストテキストテキストテキスト
-                           テキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                     </div>
-                     <div class="introduction__img">
-                        <img src="/scripts/images/image-1.jpg">
-                     </div>
-                  </div>
-               </section>
-               <section class="ranking">
-                  <div class="ranking__text">
-                     <p class="font-sm">テキスト一押しのメニュー！</p>
-                     <h1 class="main-title">MENU RANKING</h1>
-                  </div>
-                  <div class="ranking__menu">
-                     <img class="img" src="/scripts/images/image-1.jpg">
-                     <h2 class="ranking__num">No.1</h2>
-                     <h2>商品名</h2>
-                     <div class="ranking__description">
-                        <p>説明文説明文説明文説明文説
-                           明文説明文説明文説明文説明文
-                           説明文説明文説明文説明文説明文
-                        </p>
-                     </div>
-                     <a class="btn cover-3d" href="#"><span>詳しく見る</span></a>
-                  </div>
-                  <div class="ranking__menu">
-                     <img class="img2" src="/scripts/images/image-1.jpg">
-                     <h2 class="ranking__num">No.2</h2>
-                     <h2>商品名</h2>
-                     <div class="ranking__description">
-                        <p>説明文説明文説明文説明文説
-                           明文説明文説明文説明文説明文
-                           説明文説明文説明文説明文説明文
-                        </p>
-                     </div>
-                     <a class="btn shadow" href="#">詳しく見る</a>
-                  </div>
-               </section>
-               <section class="ranking">
-                  <div class="ranking__inner">
-                     <div class="ranking2__img">
-                        <img src="/scripts/images/image-1.jpg">
-                     </div>
-                     <div class="ranking__menu">
-                        <h2><span class="ranking__num">No.3</span>商品名商品名</h2>
-                        <div class="ranking__description">
-                           <p>説明文説明文説明文説明文説
-                              明文説明文説明文説明文説明文
-                              説明文説明文説明文説明文説明文
-                           </p>
+                     <div class="introduction__inner2">
+                        <div class="introduction__card">
+                           <h1 class="font-xl">
+                              テキストテキスト,<span>テキストテキスト</span>テキスト
+                           </h1>
+                           <div class="introduction__text font-md">
+                              <p>
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                                 テキストテキストテキストテキストテキストテキストテキスト
+                              </p>
+                           </div>
+                        </div>
+                        <div class="introduction__img">
+                           <img src="/scripts/images/image-1.jpg">
                         </div>
                      </div>
-                     <div class="ranking2__img">
-                        <img src="/scripts/images/image-1.jpg">
+                  </section>
+               </div>
+               <div class="div-bg">
+                  <section class="ranking">
+                     <div class="ranking__text">
+                        <p class="font-sm">テキスト一押しのメニュー！</p>
+                        <h1 class="main-title mb-lg">MENU RANKING</h1>
                      </div>
-                     <div class="ranking__menu">
-                        <h2><span class="ranking__num">No.3</span>商品名商品商品</h2>
-                        <div class="ranking__description">
-                           <p>説明文説明文説明文説明文説
-                              明文説明文説明文説明文説明文
-                              説明文説明文説明文説明文説明文
-                           </p>
+                     <div class="ranking__content">
+                        <div class="ranking__menu">
+                           <div class="img">
+                              <img src="/scripts/images/image-1.jpg">
+                           </div>
+                           <div class="ranking__description">
+                              <h2 class="ranking__num">No.1</h2>
+                              <h2>商品名</h2>
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                              <a class="btn cover-3d" href="#"><span>詳しく見る</span></a>
+                           </div>
+                        </div>
+                        <div class="ranking__menu">
+                           <div class="img">
+                              <img src="/scripts/images/image-1.jpg">
+                           </div>
+                           <div class="ranking__description">
+                              <h2 class="ranking__num">No.2</h2>
+                              <h2>商品名</h2>
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                              <a class="btn cover-3d" href="#"><span>詳しく見る</span></a>
+                           </div>
                         </div>
                      </div>
-                     <div class="ranking2__img">
-                        <img src="/scripts/images/image-1.jpg">
-                     </div>
-                     <div class="ranking__menu">
-                        <h2><span class="ranking__num">No.3</span>商品名</h2>
-                        <div class="ranking__description">
-                           <p>説明文説明文説明文説明文説
-                              明文説明文説明文説明文説明文
-                              説明文説明文説明文説明文説明文
-                           </p>
+                  </section>
+               </div>
+               <div class="div-bg">
+                  <section class="ranking2">
+                     <div class="ranking2__inner">
+                        <div class="ranking2__menu">
+                           <div class="ranking2__img">
+                              <img src="/scripts/images/image-1.jpg">
+                           </div>
+                           <div class="ranking2__description">
+                              <h2 class="ranking__num">No.2</h2>
+                              <span>商品名</span>
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                              <a class="btn cover-3d" href="#"><span>詳しく見る</span></a>
+                           </div>
+                        </div>
+                        <div class="ranking2__menu">
+                           <div class="ranking2__img">
+                              <img src="/scripts/images/image-1.jpg">
+                           </div>
+                           <div class="ranking2__description">
+                              <h2 class="ranking__num">No.2</h2>
+                              <span>商品名</span>
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                              <a class="btn cover-3d" href="#"><span>詳しく見る</span></a>
+                           </div>
+                        </div>
+                        <div class="ranking2__menu">
+                           <div class="ranking2__img">
+                              <img src="/scripts/images/image-1.jpg">
+                           </div>
+                           <div class="ranking2__description">
+                              <h2 class="ranking__num">No.2</h2>
+                              <span>商品名</span>
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                              <a class="btn cover-3d" href="#"><span>詳しく見る</span></a>
+                           </div>
                         </div>
                      </div>
-                     <a class="btn shadow" href="#">メニュー全てみる</a>
-                  </div>
-               </section>
-               <section class="fixation">
-                  <div class="fixation__inner">
-                     <div class="fixation__img">
-                        <img src="/scripts/images/image-1.jpg">
-                        <p>こだわり！</p>
+                     <a class="total btn cover-3d" href="#"><span>メニューを全てみる</span></a>
+                  </section>
+               </div>
+               <div class="div-bg">
+                  <section class="fixation">
+                     <div class="fixation__inner">
+                        <div class="fixation__conten">
+                           <div class="fixation__img">
+                              <img src="/scripts/images/image-1.jpg">
+                              <p>こだわり！</p>
+                           </div>
+                           <div class="fixation__description">
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                           </div>
+                        </div>
+                        <div class="fixation__conten">
+                           <div class="fixation__img">
+                              <img src="/scripts/images/image-1.jpg">
+                              <p>楽しみ方！</p>
+                           </div>
+                           <div class="fixation__description">
+                              <p>説明文説明文説明文説明文説
+                                 明文説明文説明文説明文説明文
+                                 説明文説明文説明文説明文説明文
+                              </p>
+                           </div>
+                        </div>
                      </div>
-                     <div class="fixation__description">
-                        <p>説明文説明文説明文説明文説
-                           明文説明文説明文説明文説明文
-                           説明文説明文説明文説明文説明文
-                        </p>
-                     </div>
-                     <div class="fixation__img">
-                        <img src="/scripts/images/image-1.jpg">
-                        <p>楽しみ方！</p>
-                     </div>
-                     <div class="fixation__description">
-                        <p>説明文説明文説明文説明文説
-                           明文説明文説明文説明文説明文
-                           説明文説明文説明文説明文説明文
-                        </p>
-                     </div>
-                  </div>
-               </section>
-               <section class="map">
-                  <div class="map__inner">
+                  </section>
+               </div>
+               <div class="div-bg">
+                  <section class="map">
                      <div class="map__title">
                         <p class="font-sm">テキスト一押しのメニュー！</p>
                         <h1 class="main-title">MENU RANKING</h1>
                      </div>
-                     <div class="map__content">
-                        <div class="map__map1">
-                           <dl class="flex1">
-                              <dt>店舗名</dt>
-                              <dd>アイウエオ</dd>
-                           </dl>
-                           <dl class="flex1">
-                              <dt>所在地</dt>
-                              <dd>〒000-0000<br>
-                                 アイウエオかきくけこ
-                              </dd>
-                           </dl>
-                           <dl class="flex1">
-                              <dt>電話番号</dt>
-                              <dd>010-1234-5678</dd>
-                           </dl>
-                           <dl class="flex1">
-                              <dt>営業時間</dt>
-                              <dd>00:00~23:59</dd>
-                           </dl>
-                           <dl class="flex1">
-                              <dt>定休日</dt>
-                              <dd>月曜日</dd>
-                           </dl> 
+                     <div class="map__inner">
+                        <div class="map__content">
+                           <div class="map__map1">
+                              <dl class="flex1">
+                                 <dt>店舗名</dt>
+                                 <dd>アイウエオ</dd>
+                              </dl>
+                              <dl class="flex1">
+                                 <dt>所在地</dt>
+                                 <dd>〒000-0000<br>
+                                    アイウエオかきくけこ
+                                 </dd>
+                              </dl>
+                              <dl class="flex1">
+                                 <dt>電話番号</dt>
+                                 <dd>010-1234-5678</dd>
+                              </dl>
+                              <dl class="flex1">
+                                 <dt>営業時間</dt>
+                                 <dd>00:00~23:59</dd>
+                              </dl>
+                              <dl class="flex1">
+                                 <dt>定休日</dt>
+                                 <dd>月曜日</dd>
+                              </dl>
+                           </div>
                         </div>
-                        <div class="map__map2">
-                           <div class="kari">マップが入るよ</div>
+                        <div class="map__content">
+                           <div id="#1" class="map__map2">
+                              <div class="kari">マップが入るよ</div>
+                           </div>
                         </div>
                      </div>
-                  </div>
-               </section>
+                  </section>
+               </div>
             </main>
          </div>
          <div class="footer">
@@ -241,7 +291,7 @@
             </div>
          </div>
          <div class="min-footer">
-            &copy; motoki ueno
+            &copy; motoki ueno <span>mosyamosya</span>
          </div>
          <div class="sp__btn">
             <div class="sp__inner">

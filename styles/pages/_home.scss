@@ -6,68 +6,226 @@ body {
 }
 
 #main-content {
-   @extend .content-width;
+   & img {
+      &:hover {
+         opacity: 0.5;
+         transition: opacity 0.5s ease-in-out;
+      }
+   }
+
+   & p {
+      font-weight: 600;
+   }
+   
+}
+
+.div-bg {
+   padding: 30px 0;
+   background-image: url(/scripts/images/image-1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-blend-mode: lighten; //背景色を透き通るようにする
+   background-color: rgba(255,255,255,0.5);
+
+   &:nth-child(2) {
+      background-image: url(/scripts/images/image-2.jpg);
+   }
+   &:nth-child(3) {
+      background-image: url(/scripts/images/image-1.jpg);
+   }
+   &:nth-child(4) {
+      background-image: url(/scripts/images/image-4.jpg);
+   }
+}
+
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100px;
+   background: transparent;
+   display: flex;
+   align-items: center;
+   z-index: 100;
+
+   & nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      margin: 20px;
+      font-size: 2em;
+
+      @include mq(sm) {
+         font-size: 1.5em;
+      }
+   }
+
+   &__list {
+      list-style: none;
+      display: flex;
+      padding: 0;
+
+      @include mq(md) {
+         display: none;
+      }
+   }
+
+   &__item {
+      margin: 20px;
+
+      & a {
+         text-decoration: none;
+         color: #0349f4d6;
+      }
+   }
+
+   &.triggered {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+   }
 }
 
 .introduction {
-   @extend .mb-lg;
-   
-    &__inner {
-      background-color: bisque;
-      margin: 50px 0;
-    }
+   @extend .content-width;
 
-    &__menu {
-      @extend .flex;
-      justify-content: center;
-      text-align: center;
-      & span {
-         display: block;
-         color: $color;
+   &__inner {
+      display: flex;
+      padding: 50px 0;
+
+      @include mq(sm) {
+         flex-direction: column;
       }
+   }
 
-      @include mq(lg) {
+   &__min-img {
 
-      }
-    }
-    &__text {
-      padding: 30px 0;
-    }
-
-    &__card {
-      height: 800px;
-      @extend .flex;
-      align-items: center;
-      justify-content: space-between;
-
-      &  > h1 {
-         text-align: center;
-      }
-
-      & span {
-         display: block;
-         color: red;
-      }
       & img {
-         border: 8px solid $cBlack;
-         opacity: 1;
-         object-fit: cover;
+         border-radius: 50%;
          width: 90%;
-         transform: rotate(-15deg) translateX(16px);
-       }
-    }
+         box-shadow: 8px 9px 5px rgba(0, 0, 0, 0.7);
 
+         &:hover {
+            opacity: 0.5;
+            transition: opacity 0.5s ease-in-out;
+         }
+
+         &:nth-child(2) {
+            width: 40%;
+            margin-right: 0;
+            transform: translate(204px, -27px) rotate(-16deg);
+         }
+      }
+
+      @include mq(sm) {
+         & img {
+            transform: translate(15px, -17px);
+            &:nth-child(2) {
+               display: none;
+            }
+         }
+      }
+   }
+
+   &__menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      & h1 {
+         text-align: center;
+         writing-mode: vertical-rl;
+
+         & span {
+            text-orientation: upright;
+            color: $color;
+         }
+      }
+
+      @include mq(sm) {
+         & h1 {
+            writing-mode: unset;
+            padding-bottom: 20px;
+            font-size: 1em;
+         }
+      }
+   }
+
+
+   &__inner2 {
+      display: flex;
+      align-items: center;
+      padding: 50px;
+      padding-bottom: 70px;
+      background: rgba(234, 235, 230, 0.5);
+
+      @include mq(sm) {
+         flex-direction: column;
+      }
+   }
+
+   &__card {
+
+      & h1 {
+         text-align: center;
+         margin-bottom: 10px;
+
+         & span {
+            color: $color;
+         }
+      }
+      
+      @include mq(sm) {
+         & h1 {
+           font-size: 1.2em; 
+         }
+      }
+
+   }
+
+   &__img {
+      border: 8px solid $cBlack;
+      transform: rotate(-19deg) translate(34px, 10px);
+
+      @include mq(sm) {
+         & {
+            transform: rotate(-15deg) translate(-8px, 10px);
+         }
+      }
+   }
 }
 
 .ranking {
    @extend .mb-lg;
-   @extend .flex;
-
+   @extend .content-width;
    padding: 20px 0;
-   
-   &__inner {
-      @extend .flex;
+
+   &__text {
+      text-align: center;
+
+      @include mq(lg) {
+
+         & > p {
+            font-size: 2em;
+         }
+         & h1 {
+            font-size: 5em;
+         }
+      }
    }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+   }
+
+
 
    & a {
       text-decoration: none;
@@ -75,6 +233,7 @@ body {
    }
 
    &__num {
+      display: inline;
       text-align: center;
       color: $cWhite;
       font-weight: 600;
@@ -83,21 +242,38 @@ body {
       background-color: $color;
    }
 
-   &__text {
-      text-align: center;
-   }
-
    &__menu {
-      @extend .flex;
       align-items: center;
+      display: flex;
 
-      & > img {
-         margin: 20px 0;
-         width: 70%;
-         border-radius: 50%;
-         box-shadow: 1px 5px 13px 4px $cBlack;
-         transform: translateX(-20%);
+      &:first-child {
+         padding-bottom: 40px;
       }
+
+      @include mq(sm) {
+         flex-direction: column;
+      }
+
+      @include mq(lg) {
+         // flex-wrap: wrap
+      }
+
+      & .img {
+         & img {
+            vertical-align: bottom;
+            transform: translate(-116px, -12px);
+            width: 90%;
+            object-fit: contain;
+            border-radius: 50%;
+            box-shadow: 8px 9px 5px rgba(0, 0, 0, 0.7);
+            flex-basis: 50%;
+
+            @include mq(sm) {
+               transform: translate(-5px, -17px);
+            }
+         }
+      }
+      
 
       & .img2 {
          transform: translateX(20%);
@@ -106,12 +282,36 @@ body {
 
    &__description {
       margin: 10px 0;
+      flex-basis: 140%;
+
+      & p {
+         margin: 20px 0;
+      }
    }
 }
 
 .ranking2 {
    @extend .mb-lg;
-   @extend .flex;
+   @extend .content-width;
+
+   &__inner {
+      display: flex;
+
+      @include mq(sm) {
+         flex-direction: column
+      }
+   }
+
+   &__menu {
+      margin-right: 10px;
+   }
+
+   &__description {
+      & > span {
+         font-size: 2em;
+         font-weight: 600;
+      }
+   }
 
    &__img {
       position: relative;
@@ -126,7 +326,7 @@ body {
          position: absolute;
          display: block;
          right: 0;
-         top: 0;
+         bottom: 0;
          background-color: $cBlack;
          color: $cWhite;
          font-size: 2em;
@@ -135,17 +335,48 @@ body {
       }
    }
 
+   & a.total {
+      display: block;
+      text-align: center;
+      width: 50%;
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 2em;
+
+      @include mq(sm) {
+         width: 90%;
+         font-size: 1em;
+      }
+   }
+
 }
 
 .fixation {
    @extend .mb-lg;
+   @extend .content-width;
 
    &__inner {
-      @extend .flex;
+      display: flex;
+
+      @include mq(sm) {
+         flex-direction: column;
+      }
    }
+
+   &__conten {
+
+      @include mq(lg) {
+         margin-right: 50px;
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   }
+
 
    &__img {
       border: 8px solid $cBlack;
+
 
       & img {
          position: relative;
@@ -157,6 +388,7 @@ body {
          transform: translate(12%, -142%) rotate(8deg);
          font-weight: 900;
          color: $cWhite;
+         text-shadow: 5px 0px $cBlack;
 
          @include mq(lg) {
             font-size: 81px;
@@ -164,6 +396,7 @@ body {
             transform: translate(3%, -110%) rotate(8deg);
             font-weight: 800;
             color: $cWhite;
+            text-shadow: 14px 6px $cBlack;
          }
          
       }
@@ -175,18 +408,25 @@ body {
 }
 
 .map {
-   @extend .mb-lg;
+   @extend .content-width;
+   margin-bottom: 30px;
 
    &__inner {
-      @extend .flex;
+      display: flex;
+      justify-content: space-between;
+
+      @include mq(sm) {
+         flex-direction: column;
+      }
    }
 
    &__title {
       text-align: center;
+      padding: 50px 0;
    }
 
    &__content {
-      @extend .flex;
+      flex-basis: 40%;
    }
 
    &__map1 {
@@ -194,10 +434,22 @@ body {
       & dl.flex1 {
          display: flex;
          justify-content: flex-start;
-         border-bottom: 1px solid $cBlack;
-         padding: 10px 0;
+         border-bottom: 3px solid $cBlack;
+         font-weight: 600;
+         padding: 30px 0;
+
+         @include mq(sm) {
+            padding: 15px 0;
+            font-size: 10px;
+         }
+
+         & dd {
+            font-size: 1.5em;
+            width: 50%;
+         }
 
          & dt {
+            font-size: 2em;
             width: 50%;
          }
       }
@@ -215,16 +467,27 @@ body {
 }
 
 .footer {
-   @extend .flex;
+   display: flex;
+   justify-content: space-around;
    align-items: center;
-   padding-bottom: 20px;
+   background-color: #0349f4d6;
 
    &__title {
       font-size: 3em;
+
+      @include mq(sm) {
+         font-size: 1em;
+      }
    }
    
    &__information {
+      font-weight: 600;
       text-align: center;
+      padding: 20px 0;
+
+      @include mq(sm) {
+         font-size: 0.5em;
+      }
    }
 }
 
@@ -234,6 +497,10 @@ body {
    color: $cWhite;
    padding: 10px 0;
    font-size: 1.5em;
+
+   & span {
+      font-size: 0.5em;
+   }
 }
 
 .sp {
@@ -245,6 +512,10 @@ body {
       width: 100%;
       background-color: rgba( 0, 0, 0, 0.6 );
       z-index: 5;
+
+      @include mq(lg) {
+         display: none;
+      }
    }
 
    &__inner {
