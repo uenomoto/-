@@ -19,6 +19,7 @@ $cMenuOpen: $cBlack;
     border: none;
     outline: none !important;
     cursor: pointer;
+    transform: translateX(-10px);
 
     @include mq(lg) {
       display: none;
@@ -60,7 +61,7 @@ $cMenuOpen: $cBlack;
     display: block;
     transform: translate3d(0, 0, -1000px);
     padding: 0 40px;
-    transition: transform 0.3s, opacity 0.2s;
+    transition: transform 0.9s, opacity 0.7s;
     opacity: 0;
   }
   &__link {
@@ -72,9 +73,9 @@ $cMenuOpen: $cBlack;
 }
 
 .menu-open {
-  & #container {
-    transform: translate(-300px, 60px);
-    box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  & #conteiner {
+    transform: translate(-230px, 60px) rotateY(-45deg);
+    box-shadow: 8px 4px 40px 8px rgb(0, 0, 0, 0.8);
   }
 
   & .mobile-menu {
@@ -98,7 +99,7 @@ $cMenuOpen: $cBlack;
 
         &:nth-child(1) {
           transition-delay: 70ms;
-          transform: translateY(11px) rotate(135deg);
+          transform: translateY(11px) rotate(675deg);
         }
         &:nth-child(2) {
           transition-delay: 0s;
@@ -106,7 +107,7 @@ $cMenuOpen: $cBlack;
         }
         &:nth-child(3) {
           transition-delay: 140ms;
-          transform: translateY(-11px) rotate(-135deg);
+          transform: translateY(-11px) rotate(-675deg);
         }
       }
     }

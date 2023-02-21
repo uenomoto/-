@@ -5,6 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>模写</title>
+   <script src="scripts/vendors/pace.js" defer></script>
+   <link rel="stylesheet" href="/styles/loader.css">
    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css">
    <link rel="stylesheet" href="styles/vendors/css-reset.css">
    <link rel="stylesheet" href="styles/parts/_mobile-menu.scss">
@@ -17,9 +19,10 @@
 
    <script src="scripts/vendors/scroll-polyfill.js" defer></script>
    <script src="scripts/libs/scroll.js" defer></script>
-   <!-- <script src="scripts/libs/mobile-menu.js" defer></script> -->
-
+   <script src="scripts/libs/mobile-menu.js" defer></script>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap"></script>
    <script src="scripts/libs/text-animation.js" defer></script>
+   <script src="scripts/libs/map.js"></script>
    <script src="scripts/main.js" defer></script>
 </head>
 
@@ -27,6 +30,7 @@
 <body>
    <div id="global-container">
       <div id="conteiner">
+         <div class="mobile-menu__cover"></div>
          <div class="nav-trigger"></div>
          <div class="header">
             <nav>
@@ -37,7 +41,7 @@
                   <li class="header__item"><a href="#">TOP</a></li>
                   <li class="header__item"><a href="#">こだわり</a></li>
                   <li class="header__item"><a href="#">楽しみ方</a></li>
-                  <li class="header__item"><a href="#1">サイトマップ</a></li>
+                  <li class="header__item"><a href="#">サイトマップ</a></li>
                   <li class="header__item"><a href="#">お問い合わせ</a></li>
                </ul>
             </nav>
@@ -112,8 +116,8 @@
                               </p>
                            </div>
                         </div>
-                        <div class="introduction__img">
-                           <img src="/scripts/images/image-1.jpg">
+                        <div class="introduction__img appear left">
+                           <img class="item" src="/scripts/images/image-1.jpg">
                         </div>
                      </div>
                   </section>
@@ -121,13 +125,13 @@
                <div class="div-bg">
                   <section class="ranking">
                      <div class="ranking__text">
-                        <p class="font-sm">テキスト一押しのメニュー！</p>
-                        <h1 class="main-title mb-lg">MENU RANKING</h1>
+                        <p class="font-sm tween-animate-title">テキスト一押しのメニュー！</p>
+                        <h1 class="main-title mb-lg tween-animate-title">MENU RANKING</h1>
                      </div>
                      <div class="ranking__content">
                         <div class="ranking__menu">
-                           <div class="img">
-                              <img src="/scripts/images/image-1.jpg">
+                           <div class="img appear left">
+                              <img class="item" src="/scripts/images/image-1.jpg">
                            </div>
                            <div class="ranking__description">
                               <h2 class="ranking__num">No.1</h2>
@@ -140,8 +144,8 @@
                            </div>
                         </div>
                         <div class="ranking__menu">
-                           <div class="img">
-                              <img src="/scripts/images/image-1.jpg">
+                           <div class="img appear left">
+                              <img class="item" src="/scripts/images/image-1.jpg">
                            </div>
                            <div class="ranking__description">
                               <h2 class="ranking__num">No.2</h2>
@@ -160,11 +164,11 @@
                   <section class="ranking2">
                      <div class="ranking2__inner">
                         <div class="ranking2__menu">
-                           <div class="ranking2__img">
-                              <img src="/scripts/images/image-1.jpg">
+                           <div class="ranking2__img appear left">
+                              <img class="item" src="/scripts/images/image-1.jpg">
                            </div>
                            <div class="ranking2__description">
-                              <h2 class="ranking__num">No.2</h2>
+                              <h2 class="ranking__num">No.3</h2>
                               <span>商品名</span>
                               <p>説明文説明文説明文説明文説
                                  明文説明文説明文説明文説明文
@@ -174,11 +178,11 @@
                            </div>
                         </div>
                         <div class="ranking2__menu">
-                           <div class="ranking2__img">
-                              <img src="/scripts/images/image-1.jpg">
+                           <div class="ranking2__img appear left">
+                              <img class="item" src="/scripts/images/image-1.jpg">
                            </div>
                            <div class="ranking2__description">
-                              <h2 class="ranking__num">No.2</h2>
+                              <h2 class="ranking__num">No.4</h2>
                               <span>商品名</span>
                               <p>説明文説明文説明文説明文説
                                  明文説明文説明文説明文説明文
@@ -188,11 +192,11 @@
                            </div>
                         </div>
                         <div class="ranking2__menu">
-                           <div class="ranking2__img">
-                              <img src="/scripts/images/image-1.jpg">
+                           <div class="ranking2__img appear left">
+                              <img class="item" src="/scripts/images/image-1.jpg">
                            </div>
                            <div class="ranking2__description">
-                              <h2 class="ranking__num">No.2</h2>
+                              <h2 class="ranking__num">No.5</h2>
                               <span>商品名</span>
                               <p>説明文説明文説明文説明文説
                                  明文説明文説明文説明文説明文
@@ -238,8 +242,8 @@
                <div class="div-bg">
                   <section class="map">
                      <div class="map__title">
-                        <p class="font-sm">テキスト一押しのメニュー！</p>
-                        <h1 class="main-title">MENU RANKING</h1>
+                        <p class="font-sm tween-animate-title">ご来店お待ちしております</p>
+                        <h1 class="main-title tween-animate-title">店舗情報</h1>
                      </div>
                      <div class="map__inner">
                         <div class="map__content">
@@ -269,9 +273,7 @@
                            </div>
                         </div>
                         <div class="map__content">
-                           <div id="#1" class="map__map2">
-                              <div class="kari">マップが入るよ</div>
-                           </div>
+                           <div id="map"></div>
                         </div>
                      </div>
                   </section>
@@ -302,6 +304,43 @@
             </div>
          </div>
       </div>
+      <nav class="mobile-menu">
+         <div class="logo">
+            <p class="font-md">お店のロゴ!!!!!</p>
+         </div>
+         <ul class="mobile-menu__main">
+            <li class="mobile-menu__item">
+               <a class="mobile-menu__link" href="#">
+                  <span class="main-title">こだわり</span>
+                  <span class="sub-title">私たちはここにこだわってます！</span>
+               </a>
+            </li>
+            <li class="mobile-menu__item">
+               <a class="mobile-menu__link" href="#">
+                  <span class="main-title">楽しみ方</span>
+                  <span class="sub-title">美味しく食べていただくには</span>
+               </a>
+            </li>
+            <li class="mobile-menu__item">
+               <a class="mobile-menu__link" href="#">
+                  <span class="main-title">店主紹介</span>
+                  <span class="sub-title">私はこんな人です</span>
+               </a>
+            </li>
+            <li class="mobile-menu__item">
+               <a class="mobile-menu__link" href="#">
+                  <span class="main-title">サイトマップ</span>
+                  <span class="sub-title">店舗情報</span>
+               </a>
+            </li>
+            <li class="mobile-menu__item">
+               <a class="mobile-menu__link" href="#">
+                  <span class="main-title">お問い合わせ</span>
+                  <span class="sub-title">お問い合わせはこちらから</span>
+               </a>
+            </li>
+         </ul>
+      </nav>
    </div>
 </body>
 

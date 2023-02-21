@@ -17,7 +17,7 @@ class HeroSlider {
             breakpoints: {
                 1024: {
                     slidesPerView: 2,
-                }
+                },
             },
         });
     }

@@ -5,14 +5,14 @@ class Main {
     constructor() {
         this.header = document.querySelector('.header');
         this.hero = new HeroSlider('.swiper');
-        this.sides = document.querySelectorAll('.side');
+        // this.sides = document.querySelectorAll('.side');
         this.#observers = [];
         this.#init();
     }
 
     #init() {
-        // new MobileMenu;
-        // Pace.on('done', this.#scrollInit.bind(this));
+        new MobileMenu;
+        Pace.on('done', this.#scrollInit.bind(this));
     }
 
     destroy() {
@@ -21,7 +21,7 @@ class Main {
 
     #scrollInit() {
         this.#observers.push(
-            new ScrollObserver('#main-content', this.#sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
+            // new ScrollObserver('#main-content', this.#sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
             new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
             new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
             new ScrollObserver('.cover-slide', this.#inviewAnimation),
@@ -35,6 +35,7 @@ class Main {
         if(inview) {
             this.hero.start();
         } else {
+            console.log('画面外になったからスライドやめたよ！')
             this.hero.stop();
         }
     }
@@ -54,13 +55,13 @@ class Main {
         }
     }
 
-    #sideAnimation(el, inview) {
-        if(inview) {
-            this.sides.forEach(side => side.classList.add('inview'));
-        } else {
-            this.sides.forEach(side => side.classList.remove('inview'));
-        }
-    }
+    // #sideAnimation(el, inview) {
+    //     if(inview) {
+    //         this.sides.forEach(side => side.classList.add('inview'));
+    //     } else {
+    //         this.sides.forEach(side => side.classList.remove('inview'));
+    //     }
+    // }
 
     #inviewAnimation(el, inview) {
         if(inview) {
@@ -70,4 +71,5 @@ class Main {
         }
     }
 }
+
 new Main;

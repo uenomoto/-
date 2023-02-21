@@ -20,7 +20,7 @@
 .animate-title.inview .char {
   @include animation(
     $name: kf-animate-chars,
-    $duration: 0.5s,
+    $duration: 0.9s,
     $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
     $fill-mode: both
   );

@@ -247,6 +247,7 @@
 .hero {
   overflow: hidden;
   padding-top: 100px;
+  margin-bottom: 20px;
 }
 .hero__title {
   position: absolute;
@@ -285,7 +286,7 @@
 
 .animate-title.inview .char {
   animation-name: kf-animate-chars;
-  animation-duration: 0.5s;
+  animation-duration: 0.9s;
   animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -524,6 +525,7 @@
   border: none;
   outline: none !important;
   cursor: pointer;
+  transform: translateX(-10px);
 }
 @media screen and (min-width: 960px) {
   .mobile-menu__btn {
@@ -564,7 +566,7 @@
   display: block;
   transform: translate3d(0, 0, -1000px);
   padding: 0 40px;
-  transition: transform 0.3s, opacity 0.2s;
+  transition: transform 0.9s, opacity 0.7s;
   opacity: 0;
 }
 .mobile-menu__link {
@@ -574,9 +576,9 @@
   text-decoration: none !important;
 }
 
-.menu-open #container {
-  transform: translate(-300px, 60px);
-  box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+.menu-open #conteiner {
+  transform: translate(-230px, 60px) rotateY(-45deg);
+  box-shadow: 8px 4px 40px 8px rgba(0, 0, 0, 0.8);
 }
 .menu-open .mobile-menu__cover {
   opacity: 1;
@@ -606,7 +608,7 @@
 }
 .menu-open .mobile-menu__btn > span:nth-child(1) {
   transition-delay: 70ms;
-  transform: translateY(11px) rotate(135deg);
+  transform: translateY(11px) rotate(675deg);
 }
 .menu-open .mobile-menu__btn > span:nth-child(2) {
   transition-delay: 0s;
@@ -614,7 +616,7 @@
 }
 .menu-open .mobile-menu__btn > span:nth-child(3) {
   transition-delay: 140ms;
-  transform: translateY(-11px) rotate(-135deg);
+  transform: translateY(-11px) rotate(-675deg);
 }
 
 body {
@@ -715,16 +717,28 @@ img {
   color: #535353;
 }
 
-body {
-  background: #be8223;
+#conteiner {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+  transition: transform 0.7s, box-shadow 0.7s;
 }
 
+#main-content {
+  position: relative;
+  z-index: 0;
+}
 #main-content img:hover {
   opacity: 0.5;
   transition: opacity 0.5s ease-in-out;
 }
 #main-content p {
   font-weight: 600;
+}
+
+main {
+  position: relative;
+  z-index: -1;
 }
 
 .div-bg {
@@ -784,6 +798,7 @@ body {
 }
 .header__item {
   margin: 20px;
+  font-weight: 600;
 }
 .header__item a {
   text-decoration: none;
@@ -1081,18 +1096,16 @@ body {
   font-size: 2em;
   width: 50%;
 }
-.map__map2 .kari {
-  margin-top: 30px;
-  width: 100%;
-  height: 600px;
-  background-color: aqua;
+
+#map {
+  height: 400px;
 }
 
 .footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(3, 73, 244, 0.8392156863);
+  background-color: gray;
 }
 .footer__title {
   font-size: 3em;

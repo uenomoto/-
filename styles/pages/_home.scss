@@ -1,11 +1,20 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-body {
-   background: $cMainTitle;
+
+#conteiner {
+   position: relative;
+   z-index: 10;
+   background-color: $cWhite;
+   transition: transform 0.7s, box-shadow 0.7s;
 }
 
+
 #main-content {
+
+   position: relative;
+   z-index: 0;
+
    & img {
       &:hover {
          opacity: 0.5;
@@ -17,6 +26,11 @@ body {
       font-weight: 600;
    }
    
+}
+
+main {
+   position: relative;
+   z-index: -1;
 }
 
 .div-bg {
@@ -78,6 +92,7 @@ body {
 
    &__item {
       margin: 20px;
+      font-weight: 600;
 
       & a {
          text-decoration: none;
@@ -183,7 +198,7 @@ body {
       
       @include mq(sm) {
          & h1 {
-           font-size: 1.2em; 
+            font-size: 1.2em; 
          }
       }
 
@@ -455,22 +470,17 @@ body {
       }
    }
 
-   &__map2 {
+}
 
-      & .kari {
-         margin-top: 30px;
-         width: 100%;
-         height: 600px;
-         background-color: aqua;
-      }
-   }
+#map {
+   height: 400px;
 }
 
 .footer {
    display: flex;
    justify-content: space-around;
    align-items: center;
-   background-color: #0349f4d6;
+   background-color: gray;
 
    &__title {
       font-size: 3em;
