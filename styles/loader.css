@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .pace-done #global-container {
   transition: opacity 1s;
   opacity: 1;
@@ -40,25 +41,42 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: #be8223;
   margin: 0 auto;
+  position: relative;
+}
+.pace-progress-inner::before {
+  content: "リニューアルオープンおめでとう!!!!!!!";
+  position: absolute;
+  top: -110px;
+  left: -360px;
+  display: block;
+  font-size: 40px;
+  color: blue;
   animation-name: sk-rotateplane;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
+}
+@media screen and (max-width: 560px) {
+  .pace-progress-inner::before {
+    top: -200px;
+    left: -180px;
+  }
 }
 
 @keyframes sk-rotateplane {
   0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: translateY(0);
+    opacity: 0;
   }
   50% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    opacity: 0.5;
   }
   100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: translateY(-50px);
+    opacity: 1;
   }
 }/*# sourceMappingURL=loader.css.map */

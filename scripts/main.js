@@ -24,9 +24,9 @@ class Main {
             // new ScrollObserver('#main-content', this.#sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
             new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
             new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
-            new ScrollObserver('.cover-slide', this.#inviewAnimation),
-            new ScrollObserver('.appear', this.#inviewAnimation),
-            new ScrollObserver('.tween-animate-title', this.#textAnimation)
+            new ScrollObserver('.cover-slide', this.#inviewAnimation, {rootMargin: "100px 0px"}),
+            new ScrollObserver('.appear', this.#inviewAnimation, { once: false, rootMargin: "100px 0px" }),
+            new ScrollObserver('.tween-animate-title', this.#textAnimation, {rootMargin: "-100px 0px"})
         )
         console.log(this.#observers);
     }

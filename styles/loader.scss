@@ -42,25 +42,43 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: $cMainTitle;
-
   margin: 0 auto;
-  @include animation(
-    $name: sk-rotateplane,
-    $duration: 1.2s,
-    $iteration-count: infinite,
-    $timing-function: ease-in-out
-  );
+  position: relative;
+
+  &::before {
+    content: "リニューアルオープンおめでとう!!!!!!!";
+    position: absolute;
+    top: -110px;
+    left: -360px;
+    display: block;
+    font-size: 40px;
+    color: blue;
+
+    @include mq(sm) {
+      top: -200px;
+      left: -180px;
+    }
+    @include animation(
+      $name: sk-rotateplane,
+      $duration: 1.2s,
+      $iteration-count: 1,
+      $timing-function: ease-in-out
+    );
+  }
 }
 
 @keyframes sk-rotateplane {
   0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: translateY(0);
+    opacity: 0;
   }
+
   50% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    opacity: 0.5;
   }
+
   100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: translateY(-50px);
+    opacity: 1;
   }
 }

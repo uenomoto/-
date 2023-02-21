@@ -2,6 +2,10 @@
 @use "../parts/common" as *;
 
 
+body {
+   font-family: "kokoro", sans-serif;
+}
+
 #conteiner {
    position: relative;
    z-index: 10;
@@ -59,7 +63,7 @@ main {
    left: 0;
    width: 100%;
    height: 100px;
-   background: transparent;
+   background: #9e9e9e3b;
    display: flex;
    align-items: center;
    z-index: 100;
